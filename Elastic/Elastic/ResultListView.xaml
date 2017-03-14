@@ -16,7 +16,7 @@
                    Orientation="Horizontal"
                    HorizontalOptions="FillAndExpand"
                    x:Name="headerLayout">
-
+                
             </StackLayout>
         </ListView.Header>
     <!--Built in Cells-->

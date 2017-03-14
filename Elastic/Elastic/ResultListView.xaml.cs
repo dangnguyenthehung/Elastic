@@ -31,8 +31,6 @@ namespace Elastic
             // total lb
             total = new Label
             {
-                HorizontalTextAlignment = TextAlignment.Center,
-                VerticalOptions = LayoutOptions.FillAndExpand,
                 HorizontalOptions = LayoutOptions.Fill,
                 Text = "Total match: 0",
                 FontSize = 16
@@ -42,7 +40,8 @@ namespace Elastic
             {
                 Placeholder = "Enter keyword: ",
                 HorizontalOptions = LayoutOptions.FillAndExpand,
-                VerticalOptions = LayoutOptions.StartAndExpand,
+                VerticalOptions = LayoutOptions.Start,
+                
                 SearchCommand = new Command(async () =>
                 {
                     //resultLabel.Text = "Result: " + searchBar.Text + " is what you want.";
@@ -60,7 +59,7 @@ namespace Elastic
                     
                     BindingContext = new ResultListViewViewModel(ItemList);
 
-
+                    
                 })
             };
             
