@@ -18,6 +18,7 @@ namespace Elastic
     public partial class ResultListView : ContentPage
     {
         SearchBar searchBar;
+        Label total;
 
         public ObservableCollection<ResultObj> ItemList { get; set; }
 
@@ -26,11 +27,22 @@ namespace Elastic
             InitializeComponent();
 
             BindingContext = new ResultListViewViewModel();
+
+            // total lb
+            total = new Label
+            {
+                HorizontalTextAlignment = TextAlignment.Center,
+                VerticalOptions = LayoutOptions.FillAndExpand,
+                HorizontalOptions = LayoutOptions.Fill,
+                Text = "Total match: 0",
+                FontSize = 16
+            };
             // search bar
             searchBar = new SearchBar
             {
                 Placeholder = "Enter keyword: ",
                 HorizontalOptions = LayoutOptions.FillAndExpand,
+                VerticalOptions = LayoutOptions.StartAndExpand,
                 SearchCommand = new Command(async () =>
                 {
                     //resultLabel.Text = "Result: " + searchBar.Text + " is what you want.";
@@ -38,17 +50,23 @@ namespace Elastic
                     SearchBoxModel model = new SearchBoxModel(user_input);
                     model.result = await model.getData();
 
+                    total.Text = "Total match: " + model.result.Count.ToString();
+
                     ItemList = new ObservableCollection<ResultObj>();
                     foreach (var item in model.result)
                     {
                         ItemList.Add(item);
                     }
+                    
                     BindingContext = new ResultListViewViewModel(ItemList);
+
+
                 })
             };
             
 
             headerLayout.Children.Add(searchBar);
+            headerLayout.Children.Add(total);
         }
 
         void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
