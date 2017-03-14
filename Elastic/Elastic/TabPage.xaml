@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Elastic.TabPage"
+             xmlns:pages="clr-namespace:Elastic;assembly=Elastic"
+             Title="TabbedPage">
+  <!--Pages can be added as references or inline-->
+  <pages:TabPageTab1/>
+  <ContentPage Title="Tab 2">
+    <StackLayout>
+      <Label Text="Green"  HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Margin="5" />
+      <BoxView Color="Green" VerticalOptions="FillAndExpand" />
+    </StackLayout>
+  </ContentPage>
+</TabbedPage>

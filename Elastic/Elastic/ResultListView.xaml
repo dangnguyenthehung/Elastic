@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Elastic.ResultListView"
+             Title="ListView"
+             x:Name="MainView">
+    <ListView ItemsSource="{Binding Items}"
+            ItemTapped="Handle_ItemTapped"
+            ItemSelected="Handle_ItemSelected"
+            HasUnevenRows="true"
+            CachingStrategy="RecycleElement"
+            IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+            RefreshCommand="{Binding RefreshDataCommand}">
+    <ListView.Header>
+            <StackLayout Padding="10" 
+                   Orientation="Horizontal"
+                   HorizontalOptions="FillAndExpand"
+                   x:Name="headerLayout">
+
+            </StackLayout>
+        </ListView.Header>
+    <!--Built in Cells-->
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <!--<TextCell Text="{Binding Text}"
+                  Detail="{Binding Detail}"/>-->
+                <ViewCell>
+                    <ViewCell.View>
+                        <StackLayout Orientation="Vertical" Spacing="0" Padding="10">
+                            <Label Font="Bold,20" Text="{Binding title}" />
+                            <Label Font="16" Text="{Binding district}" />
+                            <Label Font="14" Text="{Binding description}" />
+                            <Label Font="14" Text="{Binding image}" />
+                        </StackLayout>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+    </ListView.ItemTemplate>
+    
+    <!--Custom View Cells-->
+    <!--
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+          <StackLayout>
+            <Label Text="{Binding Text}" 
+                   Style="{DynamicResource ListItemTextStyle}" />
+            <Label Text="{Binding Detail}" 
+                   Style="{DynamicResource ListItemDetailTextStyle}"/>
+          </StackLayout>
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+    -->
+    <ListView.Footer>
+      <StackLayout Padding="10"
+                   Orientation="Horizontal"
+                   HorizontalOptions="FillAndExpand"
+                   BackgroundColor="#dadada">
+        <Label Text="Footer" 
+               HorizontalTextAlignment="Center" 
+               HorizontalOptions="FillAndExpand" 
+               TextColor="Black"
+               FontAttributes="Bold"/>
+      </StackLayout>
+    </ListView.Footer>
+  </ListView>
+</ContentPage>
