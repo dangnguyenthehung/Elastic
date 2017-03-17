@@ -4,8 +4,11 @@
              x:Class="Elastic.TabPageTab1"
              Title="Tab1">
   <StackLayout>
-    <Label Text="This is a Tabbed, you can tap on the Tabs to go to the other pages. You can specify an icon that will show up on iOS and Android with the Icon property of each page." Margin="5" />
-    <Label Text="Red" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Margin="5" />
-    <BoxView Color="Red" VerticalOptions="FillAndExpand" />
-  </StackLayout>
+        <Button x:Name="btnPickImg" Text="Pick Image" HeightRequest="50" BackgroundColor="Aqua" Clicked="PickPhoto_Clicked"/>
+        <Button x:Name="btnTakeImg" Text="Take Image" HeightRequest="50" BackgroundColor="Gray" Clicked="TakePhoto_Clicked"/>
+        <Image x:Name="FileImage" HeightRequest="200" HorizontalOptions="Center"></Image>
+        <Label x:Name="LocalPathLabel"/>
+        <Button x:Name="UploadFile" Text="Upload Image" HeightRequest="50" BackgroundColor="Red" Clicked="UploadFile_Clicked"/>
+        <Label x:Name="RemotePathLabel"/>
+    </StackLayout>
 </ContentPage>

@@ -1,0 +1,2 @@
+D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\Elastic.UWP.csproj;x86
+D:\Project\XamarinTest\Elastic\Elastic\Elastic\Elastic.csproj;neutral

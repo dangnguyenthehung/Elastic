@@ -116,8 +116,12 @@ D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\bin\ARM\Debug\Xamarin.Forms.P
 D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\bin\ARM\Debug\Xamarin.Forms.Platform.dll
 D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\bin\ARM\Debug\Xamarin.Forms.Xaml.dll
 D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\bin\ARM\Debug\Elastic.dll
+D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\bin\ARM\Debug\Plugin.Media.Abstractions.dll
+D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\bin\ARM\Debug\Plugin.Media.dll
 D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\bin\ARM\Debug\Newtonsoft.Json.dll
 D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\bin\ARM\Debug\Elastic.pdb
+D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\bin\ARM\Debug\Plugin.Media.Abstractions.pdb
+D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\bin\ARM\Debug\Plugin.Media.pdb
 D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\bin\ARM\Debug\Newtonsoft.Json.xml
 D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\obj\ARM\Debug\Elastic.UWP.csprojResolveAssemblyReference.cache
 D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\obj\ARM\Debug\App.g.i.cs

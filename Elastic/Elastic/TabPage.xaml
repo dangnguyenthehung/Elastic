@@ -6,10 +6,5 @@
              Title="TabbedPage">
   <!--Pages can be added as references or inline-->
   <pages:TabPageTab1/>
-  <ContentPage Title="Tab 2">
-    <StackLayout>
-      <Label Text="Green"  HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Margin="5" />
-      <BoxView Color="Green" VerticalOptions="FillAndExpand" />
-    </StackLayout>
-  </ContentPage>
+  
 </TabbedPage>

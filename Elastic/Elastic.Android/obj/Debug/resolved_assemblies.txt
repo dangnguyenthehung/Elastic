@@ -1,6 +1,11 @@
 D:\Project\XamarinTest\Elastic\Elastic\Elastic.Android\obj\Debug\android\assets\Elastic.Android.dll
 D:\Project\XamarinTest\Elastic\Elastic\Elastic.Android\obj\Debug\android\assets\Elastic.dll
 D:\Project\XamarinTest\Elastic\Elastic\Elastic.Android\obj\Debug\android\assets\FormsViewGroup.dll
+D:\Project\XamarinTest\Elastic\Elastic\Elastic.Android\obj\Debug\android\assets\Plugin.CurrentActivity.dll
+D:\Project\XamarinTest\Elastic\Elastic\Elastic.Android\obj\Debug\android\assets\Plugin.Media.Abstractions.dll
+D:\Project\XamarinTest\Elastic\Elastic\Elastic.Android\obj\Debug\android\assets\Plugin.Media.dll
+D:\Project\XamarinTest\Elastic\Elastic\Elastic.Android\obj\Debug\android\assets\Plugin.Permissions.Abstractions.dll
+D:\Project\XamarinTest\Elastic\Elastic\Elastic.Android\obj\Debug\android\assets\Plugin.Permissions.dll
 D:\Project\XamarinTest\Elastic\Elastic\Elastic.Android\obj\Debug\android\assets\Xamarin.Android.Support.Animated.Vector.Drawable.dll
 D:\Project\XamarinTest\Elastic\Elastic\Elastic.Android\obj\Debug\android\assets\Xamarin.Android.Support.Design.dll
 D:\Project\XamarinTest\Elastic\Elastic\Elastic.Android\obj\Debug\android\assets\Xamarin.Android.Support.v4.dll
@@ -28,10 +33,10 @@ D:\Project\XamarinTest\Elastic\Elastic\Elastic.Android\obj\Debug\android\assets\
 D:\Project\XamarinTest\Elastic\Elastic\Elastic.Android\obj\Debug\android\assets\System.ObjectModel.dll
 D:\Project\XamarinTest\Elastic\Elastic\Elastic.Android\obj\Debug\android\assets\System.Threading.Tasks.dll
 D:\Project\XamarinTest\Elastic\Elastic\Elastic.Android\obj\Debug\android\assets\System.Collections.dll
+D:\Project\XamarinTest\Elastic\Elastic\Elastic.Android\obj\Debug\android\assets\System.IO.dll
 D:\Project\XamarinTest\Elastic\Elastic\Elastic.Android\obj\Debug\android\assets\System.Net.Http.dll
 D:\Project\XamarinTest\Elastic\Elastic\Elastic.Android\obj\Debug\android\assets\System.Threading.dll
 D:\Project\XamarinTest\Elastic\Elastic\Elastic.Android\obj\Debug\android\assets\Newtonsoft.Json.dll
-D:\Project\XamarinTest\Elastic\Elastic\Elastic.Android\obj\Debug\android\assets\System.IO.dll
 D:\Project\XamarinTest\Elastic\Elastic\Elastic.Android\obj\Debug\android\assets\System.Xml.XDocument.dll
 D:\Project\XamarinTest\Elastic\Elastic\Elastic.Android\obj\Debug\android\assets\System.Globalization.dll
 D:\Project\XamarinTest\Elastic\Elastic\Elastic.Android\obj\Debug\android\assets\System.Runtime.Serialization.Primitives.dll
