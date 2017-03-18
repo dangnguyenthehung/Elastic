@@ -17,7 +17,7 @@ namespace Elastic
         {
             InitializeComponent();
             Children.Add(new ResultListView());
-            //Children.Add(new UpLoadImagePage());
+            Children.Add(new PickImageList());
         }
     }
 }

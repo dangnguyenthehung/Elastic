@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Elastic.PickImageList"
+             Title="PickImage">
+    <StackLayout>
+        <Button x:Name="btnPickImg" Text="Pick Image" HeightRequest="50" BackgroundColor="Aqua" Clicked="PickPhoto_Clicked"/>
+        <Button x:Name="btnTakeImg" Text="Take Image" HeightRequest="50" BackgroundColor="Gray" Clicked="TakePhoto_Clicked"/>
+        <Image x:Name="FileImage" HeightRequest="200" HorizontalOptions="Center"></Image>
+
+        <Grid x:Name="GridView" HorizontalOptions="Fill">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <!--<Button Text="1" Grid.Row="0" Grid.Column="0" />-->
+            
+        </Grid>
+
+        <Label x:Name="LocalPathLabel"/>
+        <Button x:Name="UploadFile" Text="Upload Image" HeightRequest="50" BackgroundColor="Red" Clicked="UploadFile_Clicked"/>
+        <Label x:Name="RemotePathLabel"/>
+    </StackLayout>
+</ContentPage>

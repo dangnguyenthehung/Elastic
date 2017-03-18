@@ -34,3 +34,4 @@ D:\Project\XamarinTest\Elastic\Elastic\Elastic\bin\Debug\Xamarin.Forms.Platform.
 D:\Project\XamarinTest\Elastic\Elastic\Elastic\bin\Debug\Xamarin.Forms.Xaml.pdb
 D:\Project\XamarinTest\Elastic\Elastic\Elastic\bin\Debug\Xamarin.Forms.Xaml.xml
 D:\Project\XamarinTest\Elastic\Elastic\Elastic\obj\Debug\Elastic.csprojResolveAssemblyReference.cache
+D:\Project\XamarinTest\Elastic\Elastic\Elastic\obj\Debug\Elastic.PickImageList.xaml.g.cs
