@@ -6,19 +6,30 @@ using System.Threading.Tasks;
 using Windows.Storage;
 using Windows.Storage.Pickers;
 using Windows.UI.Xaml;
-using Windows.UI.Xaml.Media.Imaging;
+using Xamarin.Forms;
+using Elastic.Object;
+using Elastic.UWP;
+using Windows.Storage.Streams;
 
+[assembly: Dependency(typeof(ImgPicker))]
 namespace Elastic.UWP
 {
-    public class ImgPicker
+    public class ImgPicker : IPicker
     {
-        public List<BitmapImage> imagelist { get; set;}
+        private List<StorageFile> imagelist = new List<StorageFile>();
+        
         public ImgPicker()
         {
-            openBtn_Click();
+           // openBtn_Click();
         }
 
-        private async void openBtn_Click()
+        public async Task<List<StorageFile>> openBtn_Click()
+        {
+            imagelist = await process();
+            return imagelist;
+        }
+        
+        private async Task<List<StorageFile>> process()
         {
             FileOpenPicker openPicker = new FileOpenPicker();
 
@@ -41,11 +52,11 @@ namespace Elastic.UWP
 
                     var stream = await files.OpenAsync(Windows.Storage.FileAccessMode.Read);
 
-                    var image = new BitmapImage();
+                    //var image = new StorageFile();
 
-                    image.SetSource(stream);
-
-                    imagelist.Add(image);
+                    //await image.SetSource(stream);
+                    
+                    imagelist.Add(files);
 
                 }
 
@@ -56,7 +67,24 @@ namespace Elastic.UWP
                 //
 
             }
+            return imagelist;
         }
+        //public async Task<byte[]> ReadFile(StorageFile file)
+        //{
+        //    byte[] fileBytes = null;
+        //    using (IRandomAccessStreamWithContentType stream = await file.OpenReadAsync())
+        //    {
+        //        fileBytes = new byte[stream.Size];
+        //        using (DataReader reader = new DataReader(stream))
+        //        {
+        //            await reader.LoadAsync((uint)stream.Size);
+        //            reader.ReadBytes(fileBytes);
+        //        }
+        //    }
+
+        //    return fileBytes;
+        //}
+
 
     }
 }

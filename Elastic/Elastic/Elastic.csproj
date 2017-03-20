@@ -42,6 +42,9 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Object\ImageStream.cs" />
+    <Compile Include="Object\IPicker.cs" />
+    <Compile Include="Object\IUpload.cs" />
     <Compile Include="Object\ResultObj.cs" />
     <Compile Include="PickImageList.xaml.cs">
       <DependentUpon>PickImageList.xaml</DependentUpon>

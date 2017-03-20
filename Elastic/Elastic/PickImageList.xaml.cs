@@ -1,7 +1,9 @@
-﻿using Plugin.Media;
+﻿using Elastic.Object;
+using Plugin.Media;
 using Plugin.Media.Abstractions;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -18,73 +20,60 @@ namespace Elastic
     public partial class PickImageList : ContentPage
     {
         private MediaFile _mediaFile;
+        private List<StorageFile> ImageList;
+        private List<ImageStream> streamList;
 
         public PickImageList()
         {
             InitializeComponent();
         }
 
-
         private async void PickPhoto_Clicked(object sender, EventArgs e)
         {
             GridView.Children.Clear();
-            await CrossMedia.Current.Initialize();
-
-            if (!CrossMedia.Current.IsPickPhotoSupported)
+            var click = DependencyService.Get<IPicker>();
+            if (click != null)
             {
-                await DisplayAlert("No PickPhoto", ":( No pickPhoto available.", "OK");
-                return;
-            }
-
-            _mediaFile = await CrossMedia.Current.PickPhotoAsync();
-
-            if (_mediaFile == null)
-            {
-                return;
-            }
-
-            LocalPathLabel.Text = _mediaFile.Path;
-            FileImage.Source = ImageSource.FromStream(() =>
-            {
-                return _mediaFile.GetStream();
-            });
-
-            var row = 0;
-            var col = 0;
-            for (var i = 0; i < 6; i++)
-            {
-                if (row == 2)
+                ImageList = await click.openBtn_Click();
+                var count = ImageList.Count();
+                
+                var row = 0;
+                var col = 0;
+                foreach (var item in ImageList)
                 {
-                    row = 0;
-                }
-                if (col == 3)
-                {
-                    col = 0;
-                    row++;
-                }
-                Image img = new Image()
-                {
-                    Source = ImageSource.FromStream(() =>
+                   
+                    //var img = new ImageStream();
+                    //img.fileBytes = await click.ReadFile(item);
+                    
+                    //img.fileName = item.Name;
+                    //img.filePath = item.Path;
+                    //streamList.Add(img);
+
+                    if (row == 3)
                     {
-                        return _mediaFile.GetStream();
-                    }),
-                    HorizontalOptions = LayoutOptions.Center,
-                    HeightRequest = 50
-                };
-                GridView.Children.Add(img, col, row);
-                col++;
+                        row = 0;
+                    }
+                    if (col == 3)
+                    {
+                        col = 0;
+                        row++;
+                    }
+
+                    GridView.Children.Add(new Image()
+                    {
+                        Source = item.Path,
+                        HorizontalOptions = LayoutOptions.Center,
+                        HeightRequest = 100
+                    },
+                    col, row);
+
+                    col++;
+
+                }
+                FileImage.Source = ImageList[0].Path;
+
             }
-            //    if (Device.OS == TargetPlatform.Windows || Device.OS == TargetPlatform.WinPhone)
-            //    {
-            //        // move layout under the status bar
-
-
-            ////
-            //    }
-
-
         }
-
         private async void TakePhoto_Clicked(object sender, EventArgs e)
         {
             await CrossMedia.Current.Initialize();
@@ -112,17 +101,37 @@ namespace Elastic
         }
         private async void UploadFile_Clicked(object sender, EventArgs e)
         {
-            var content = new MultipartFormDataContent();
+            StorageFile file = ImageList[0];
 
-            content.Add(new StreamContent(_mediaFile.GetStream()), "\"file\"",
-                $"\"{_mediaFile.Path}\"");
+            var action = DependencyService.Get<IUpload>();
+            string respone = await action.Upload(file);
 
-            var httpClient = new HttpClient();
+            RemotePathLabel.Text = respone;
+            //var form = new MultipartFormDataContent();
 
-            var uploadServiceBaseAddress = "http://dangnguyenthehung.somee.com/UploadToServer/api/Files/Upload";
-            var httpResponseMessage = await httpClient.PostAsync(uploadServiceBaseAddress, content);
+            //HttpContent content = new StringContent("fileToUpload");
+            //form.Add(content, "fileToUpload");
+            //var stream = await file.OpenStreamForReadAsync();
+            //content = new StreamContent(stream);
+            //content.Headers.ContentDisposition = new ContentDispositionHeaderValue("form-data")
+            //{
+            //    Name = "fileToUpload",
+            //    FileName = file.Name
+            //};
 
-            RemotePathLabel.Text = await httpResponseMessage.Content.ReadAsStringAsync();
+            //content.Add(new StreamContent(_mediaFile.GetStream()), "\"file\"",
+            //    $"\"{_mediaFile.Path}\"");
+
+            // test code
+
+
+
+            //var httpClient = new HttpClient();
+
+            //var uploadServiceBaseAddress = "http://dangnguyenthehung.somee.com/UploadToServer/api/Files/Upload";
+            //var httpResponseMessage = await httpClient.PostAsync(uploadServiceBaseAddress, form);
+
+            //RemotePathLabel.Text = await httpResponseMessage.Content.ReadAsStringAsync();
         }
     }
 }

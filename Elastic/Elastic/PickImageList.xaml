@@ -12,6 +12,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
@@ -22,6 +23,9 @@
             <!--<Button Text="1" Grid.Row="0" Grid.Column="0" />-->
             
         </Grid>
+        <!--<StackLayout x:Name="ImgContain" HorizontalOptions="CenterAndExpand">
+            
+        </StackLayout>-->
 
         <Label x:Name="LocalPathLabel"/>
         <Button x:Name="UploadFile" Text="Upload Image" HeightRequest="50" BackgroundColor="Red" Clicked="UploadFile_Clicked"/>
