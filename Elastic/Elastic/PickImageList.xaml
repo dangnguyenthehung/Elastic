@@ -29,7 +29,7 @@
         </StackLayout>
         
 
-        <Label x:Name="LocalPathLabel" HorizontalOptions="Center" HeightRequest="50" FontSize="20"/>
+        <Label x:Name="LocalPathLabel" HorizontalOptions="Center" HeightRequest="50" FontSize="12"/>
         <Button x:Name="UploadFile" Text="Upload Image" HeightRequest="50" BackgroundColor="Red" Clicked="UploadFile_Clicked"/>
         
         <!--<Label x:Name="RemotePathLabel"/>-->

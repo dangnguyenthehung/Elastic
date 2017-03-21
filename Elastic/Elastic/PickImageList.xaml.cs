@@ -29,6 +29,7 @@ namespace Elastic
         {
             GridView.Children.Clear();
             pathListContain.Children.Clear();
+            _mediaFile = null;
 
             var click = DependencyService.Get<IPhotoAction>();
             if (click != null)
@@ -108,30 +109,47 @@ namespace Elastic
         {
             //GridView.Children.Clear();
             pathListContain.Children.Clear();
-
-            var action = DependencyService.Get<IPhotoAction>();
-            if (action != null)
+            if (_mediaFile == null )
             {
-                List<string> responseList = await action.Upload();
-                foreach (var item in responseList)
+                var action = DependencyService.Get<IPhotoAction>();
+                if (action != null)
                 {
+                    List<string> responseList = await action.Upload();
+                    foreach (var item in responseList)
+                    {
 
-                    string itemUrl = formatUrl(item);
-                    System.Diagnostics.Debug.WriteLine(itemUrl);
+                        string itemUrl = formatUrl(item);
+                        System.Diagnostics.Debug.WriteLine(itemUrl);
 
-                    pathListContain.Children.Add(
-                        new Label()
-                        {
-                            Text = itemUrl,
-                            FontSize = 12,
-                            HorizontalOptions = LayoutOptions.FillAndExpand
-                        }
-                        );
+                        pathListContain.Children.Add(
+                            new Label()
+                            {
+                                Text = itemUrl,
+                                FontSize = 12,
+                                HorizontalOptions = LayoutOptions.FillAndExpand
+                            }
+                            );
+                    }
+                }
+                else
+                {
+                    //
                 }
             }
             else
             {
-                //
+                var content = new MultipartFormDataContent();
+
+                content.Add(new StreamContent(_mediaFile.GetStream()), "\"file\"",
+                    $"\"{_mediaFile.Path}\"");
+
+                var httpClient = new HttpClient();
+
+                var uploadServiceBaseAddress = "http://dangnguyenthehung.somee.com/UploadToServer/api/Files/Upload";
+                var httpResponseMessage = await httpClient.PostAsync(uploadServiceBaseAddress, content);
+
+                 var res = await httpResponseMessage.Content.ReadAsStringAsync();
+                LocalPathLabel.Text = formatUrl(res);
             }
 
 
@@ -157,7 +175,7 @@ namespace Elastic
             //    }, col, row);
 
             //col++;
-            
+
         }
 
         private string formatUrl(string originalUrl)
