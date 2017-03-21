@@ -6,8 +6,8 @@
     <StackLayout>
         <Button x:Name="btnPickImg" Text="Pick Image" HeightRequest="50" BackgroundColor="Aqua" Clicked="PickPhoto_Clicked"/>
         <Button x:Name="btnTakeImg" Text="Take Image" HeightRequest="50" BackgroundColor="Gray" Clicked="TakePhoto_Clicked"/>
-        <Image x:Name="FileImage" HeightRequest="200" HorizontalOptions="Center"></Image>
-
+        <Image x:Name="FileImage" HeightRequest="100" HorizontalOptions="Center"></Image>
+        
         <Grid x:Name="GridView" HorizontalOptions="Fill">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
@@ -23,12 +23,16 @@
             <!--<Button Text="1" Grid.Row="0" Grid.Column="0" />-->
             
         </Grid>
-        <!--<StackLayout x:Name="ImgContain" HorizontalOptions="CenterAndExpand">
-            
-        </StackLayout>-->
 
-        <Label x:Name="LocalPathLabel"/>
+        <StackLayout x:Name="pathList" HorizontalOptions="FillAndExpand">
+
+        </StackLayout>
+        
+
+        <Label x:Name="LocalPathLabel" HorizontalOptions="Center" HeightRequest="50" FontSize="20"/>
         <Button x:Name="UploadFile" Text="Upload Image" HeightRequest="50" BackgroundColor="Red" Clicked="UploadFile_Clicked"/>
-        <Label x:Name="RemotePathLabel"/>
+        
+        <!--<Label x:Name="RemotePathLabel"/>-->
+        
     </StackLayout>
 </ContentPage>

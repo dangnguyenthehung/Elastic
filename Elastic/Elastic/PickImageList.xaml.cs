@@ -8,9 +8,6 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using Windows.Storage;
-using Windows.Storage.Pickers;
-using Windows.UI.Xaml.Media.Imaging;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -20,8 +17,8 @@ namespace Elastic
     public partial class PickImageList : ContentPage
     {
         private MediaFile _mediaFile;
-        private List<StorageFile> ImageList;
-        private List<ImageStream> streamList;
+        //private List<StorageFile> ImageList;
+        //private List<ImageStream> streamList;
 
         public PickImageList()
         {
@@ -30,47 +27,42 @@ namespace Elastic
 
         private async void PickPhoto_Clicked(object sender, EventArgs e)
         {
-            GridView.Children.Clear();
-            var click = DependencyService.Get<IPicker>();
+            //GridView.Children.Clear();
+            var click = DependencyService.Get<IPhotoAction>();
             if (click != null)
             {
-                ImageList = await click.openBtn_Click();
-                var count = ImageList.Count();
+                var count = await click.openBtn_Click();
                 
                 var row = 0;
                 var col = 0;
-                foreach (var item in ImageList)
-                {
-                   
-                    //var img = new ImageStream();
-                    //img.fileBytes = await click.ReadFile(item);
-                    
-                    //img.fileName = item.Name;
-                    //img.filePath = item.Path;
-                    //streamList.Add(img);
+                //foreach (var item in ImageList)
+                //{
 
-                    if (row == 3)
-                    {
-                        row = 0;
-                    }
-                    if (col == 3)
-                    {
-                        col = 0;
-                        row++;
-                    }
+                //    if (row == 3)
+                //    {
+                //        row = 0;
+                //    }
+                //    if (col == 3)
+                //    {
+                //        col = 0;
+                //        row++;
+                //    }
 
-                    GridView.Children.Add(new Image()
-                    {
-                        Source = item.Path,
-                        HorizontalOptions = LayoutOptions.Center,
-                        HeightRequest = 100
-                    },
-                    col, row);
+                //    GridView.Children.Add(new Image()
+                //    {
+                //        Source = item.Path,
+                //        HorizontalOptions = LayoutOptions.Center,
+                //        HeightRequest = 100
+                //    },
+                //    col, row);
 
-                    col++;
+                //    col++;
 
-                }
-                FileImage.Source = ImageList[0].Path;
+                //}
+
+                //FileImage.Source = ImageList[0].Path;
+
+                LocalPathLabel.Text = count.ToString();
 
             }
         }
@@ -101,37 +93,65 @@ namespace Elastic
         }
         private async void UploadFile_Clicked(object sender, EventArgs e)
         {
-            StorageFile file = ImageList[0];
+            //StorageFile file = ImageList[0];
 
-            var action = DependencyService.Get<IUpload>();
-            string respone = await action.Upload(file);
+            GridView.Children.Clear();
 
-            RemotePathLabel.Text = respone;
-            //var form = new MultipartFormDataContent();
+            var action = DependencyService.Get<IPhotoAction>();
+            List<string> responseList = await action.Upload();
 
-            //HttpContent content = new StringContent("fileToUpload");
-            //form.Add(content, "fileToUpload");
-            //var stream = await file.OpenStreamForReadAsync();
-            //content = new StreamContent(stream);
-            //content.Headers.ContentDisposition = new ContentDispositionHeaderValue("form-data")
-            //{
-            //    Name = "fileToUpload",
-            //    FileName = file.Name
-            //};
+            //var row = 0;
+            //var col = 0;
 
-            //content.Add(new StreamContent(_mediaFile.GetStream()), "\"file\"",
-            //    $"\"{_mediaFile.Path}\"");
+            foreach (var item in responseList)
+            {
 
-            // test code
+                string itemUrl = formatUrl(item);
+                System.Diagnostics.Debug.WriteLine(itemUrl);
 
+                // get image from internet with Uri path -> add to GridView
 
+                //if (row == 3)
+                //{
+                //    row = 0;
+                //}
+                //if (col == 3)
+                //{
+                //    col = 0;
+                //    row++;
+                //}
+                //GridView.Children.Add(
+                //    new Image()
+                //    {
+                //        Source = new Uri(itemUrl, UriKind.Absolute),
+                //        HeightRequest = 50
+                //    }, col, row);
 
-            //var httpClient = new HttpClient();
+                //col++;
 
-            //var uploadServiceBaseAddress = "http://dangnguyenthehung.somee.com/UploadToServer/api/Files/Upload";
-            //var httpResponseMessage = await httpClient.PostAsync(uploadServiceBaseAddress, form);
+                pathList.Children.Add(
+                    new Label()
+                    {
+                        Text = itemUrl,
+                        FontSize = 12,
+                        HorizontalOptions = LayoutOptions.FillAndExpand
+                    }
+                    );
+            }
+            
 
-            //RemotePathLabel.Text = await httpResponseMessage.Content.ReadAsStringAsync();
+            
+
+            
+        }
+
+        private string formatUrl(string originalUrl)
+        {
+            int startIndex = originalUrl.IndexOf("www");
+            originalUrl = originalUrl.Substring(startIndex, originalUrl.Length - startIndex - 1).Replace("\\", "/").Replace("//", "/");
+            string newUrl = "http://" + originalUrl;
+
+            return newUrl;
         }
     }
 }

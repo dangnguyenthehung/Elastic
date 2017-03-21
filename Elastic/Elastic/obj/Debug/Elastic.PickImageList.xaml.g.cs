@@ -29,13 +29,13 @@ namespace Elastic {
         private global::Xamarin.Forms.Grid GridView;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.StackLayout pathList;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Label LocalPathLabel;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Button UploadFile;
-        
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::Xamarin.Forms.Label RemotePathLabel;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
@@ -44,9 +44,9 @@ namespace Elastic {
             btnTakeImg = this.FindByName<global::Xamarin.Forms.Button>("btnTakeImg");
             FileImage = this.FindByName<global::Xamarin.Forms.Image>("FileImage");
             GridView = this.FindByName<global::Xamarin.Forms.Grid>("GridView");
+            pathList = this.FindByName<global::Xamarin.Forms.StackLayout>("pathList");
             LocalPathLabel = this.FindByName<global::Xamarin.Forms.Label>("LocalPathLabel");
             UploadFile = this.FindByName<global::Xamarin.Forms.Button>("UploadFile");
-            RemotePathLabel = this.FindByName<global::Xamarin.Forms.Label>("RemotePathLabel");
         }
     }
 }
