@@ -24,7 +24,7 @@
             
         </Grid>
 
-        <StackLayout x:Name="pathList" HorizontalOptions="FillAndExpand">
+        <StackLayout x:Name="pathListContain" HorizontalOptions="FillAndExpand">
 
         </StackLayout>
         

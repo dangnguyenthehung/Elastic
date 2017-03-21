@@ -27,47 +27,59 @@ namespace Elastic
 
         private async void PickPhoto_Clicked(object sender, EventArgs e)
         {
-            //GridView.Children.Clear();
+            GridView.Children.Clear();
+            pathListContain.Children.Clear();
+
             var click = DependencyService.Get<IPhotoAction>();
             if (click != null)
             {
-                var count = await click.openBtn_Click();
+                var pathList = await click.openBtn_Click();
                 
                 var row = 0;
                 var col = 0;
-                //foreach (var item in ImageList)
-                //{
 
-                //    if (row == 3)
-                //    {
-                //        row = 0;
-                //    }
-                //    if (col == 3)
-                //    {
-                //        col = 0;
-                //        row++;
-                //    }
+                foreach (var item in pathList)
+                {
+                    pathListContain.Children.Add(
+                        new Label()
+                        {
+                            Text = item,
+                            FontSize = 12,
+                            HorizontalOptions = LayoutOptions.FillAndExpand
+                        });
 
-                //    GridView.Children.Add(new Image()
-                //    {
-                //        Source = item.Path,
-                //        HorizontalOptions = LayoutOptions.Center,
-                //        HeightRequest = 100
-                //    },
-                //    col, row);
+                    if (row == 3)
+                    {
+                        row = 0;
+                    }
+                    if (col == 3)
+                    {
+                        col = 0;
+                        row++;
+                    }
 
-                //    col++;
+                    GridView.Children.Add(new Image()
+                    {
+                        Source = ImageSource.FromFile(item),
+                        HorizontalOptions = LayoutOptions.Center,
+                        HeightRequest = 100
+                    },
+                    col, row);
 
-                //}
-
+                    col++;
+                    
+                }
+                
                 //FileImage.Source = ImageList[0].Path;
-
-                LocalPathLabel.Text = count.ToString();
-
+                
             }
         }
+
         private async void TakePhoto_Clicked(object sender, EventArgs e)
         {
+            GridView.Children.Clear();
+            pathListContain.Children.Clear();
+
             await CrossMedia.Current.Initialize();
 
             if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
@@ -91,57 +103,60 @@ namespace Elastic
                 return _mediaFile.GetStream();
             });
         }
+
         private async void UploadFile_Clicked(object sender, EventArgs e)
         {
-            //StorageFile file = ImageList[0];
-
-            GridView.Children.Clear();
+            //GridView.Children.Clear();
+            pathListContain.Children.Clear();
 
             var action = DependencyService.Get<IPhotoAction>();
-            List<string> responseList = await action.Upload();
+            if (action != null)
+            {
+                List<string> responseList = await action.Upload();
+                foreach (var item in responseList)
+                {
+
+                    string itemUrl = formatUrl(item);
+                    System.Diagnostics.Debug.WriteLine(itemUrl);
+
+                    pathListContain.Children.Add(
+                        new Label()
+                        {
+                            Text = itemUrl,
+                            FontSize = 12,
+                            HorizontalOptions = LayoutOptions.FillAndExpand
+                        }
+                        );
+                }
+            }
+            else
+            {
+                //
+            }
+
 
             //var row = 0;
             //var col = 0;
 
-            foreach (var item in responseList)
-            {
+            // get image from internet with Uri path -> add to GridView (put in foreach() loop)
 
-                string itemUrl = formatUrl(item);
-                System.Diagnostics.Debug.WriteLine(itemUrl);
+            //if (row == 3)
+            //{
+            //    row = 0;
+            //}
+            //if (col == 3)
+            //{
+            //    col = 0;
+            //    row++;
+            //}
+            //GridView.Children.Add(
+            //    new Image()
+            //    {
+            //        Source = new Uri(itemUrl, UriKind.Absolute),
+            //        HeightRequest = 50
+            //    }, col, row);
 
-                // get image from internet with Uri path -> add to GridView
-
-                //if (row == 3)
-                //{
-                //    row = 0;
-                //}
-                //if (col == 3)
-                //{
-                //    col = 0;
-                //    row++;
-                //}
-                //GridView.Children.Add(
-                //    new Image()
-                //    {
-                //        Source = new Uri(itemUrl, UriKind.Absolute),
-                //        HeightRequest = 50
-                //    }, col, row);
-
-                //col++;
-
-                pathList.Children.Add(
-                    new Label()
-                    {
-                        Text = itemUrl,
-                        FontSize = 12,
-                        HorizontalOptions = LayoutOptions.FillAndExpand
-                    }
-                    );
-            }
-            
-
-            
-
+            //col++;
             
         }
 

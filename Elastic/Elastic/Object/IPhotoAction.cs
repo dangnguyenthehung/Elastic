@@ -9,8 +9,8 @@ namespace Elastic.Object
     public interface IPhotoAction
     {
         // pick images
-        Task<int> openBtn_Click();
-        Task<int> countImg();
+        Task<List<string>> openBtn_Click();
+        List<string> pathList();
 
         // upload images
         Task<List<string>> Upload();

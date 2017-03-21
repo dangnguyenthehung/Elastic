@@ -29,7 +29,7 @@ namespace Elastic {
         private global::Xamarin.Forms.Grid GridView;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::Xamarin.Forms.StackLayout pathList;
+        private global::Xamarin.Forms.StackLayout pathListContain;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Label LocalPathLabel;
@@ -44,7 +44,7 @@ namespace Elastic {
             btnTakeImg = this.FindByName<global::Xamarin.Forms.Button>("btnTakeImg");
             FileImage = this.FindByName<global::Xamarin.Forms.Image>("FileImage");
             GridView = this.FindByName<global::Xamarin.Forms.Grid>("GridView");
-            pathList = this.FindByName<global::Xamarin.Forms.StackLayout>("pathList");
+            pathListContain = this.FindByName<global::Xamarin.Forms.StackLayout>("pathListContain");
             LocalPathLabel = this.FindByName<global::Xamarin.Forms.Label>("LocalPathLabel");
             UploadFile = this.FindByName<global::Xamarin.Forms.Button>("UploadFile");
         }

@@ -20,22 +20,24 @@ namespace Elastic.UWP
     public class PhotoActionMethod : IPhotoAction
     {
         private List<StorageFile> imagelist = new List<StorageFile>();
+        private List<string> path_List = new List<string>();
         
         public PhotoActionMethod()
         {
            // openBtn_Click();
         }
 
-        public async Task<int> openBtn_Click()
+        public async Task<List<string>> openBtn_Click()
         {
             imagelist.Clear();
             imagelist = await process();
-            return imagelist.Count();
+
+            return path_List;
         }
 
-        public async Task<int> countImg()
+        public List<string> pathList()
         {
-            return imagelist.Count();
+            return path_List;
         }
 
         private async Task<List<StorageFile>> process()
@@ -66,6 +68,7 @@ namespace Elastic.UWP
                     //await image.SetSource(stream);
                     
                     imagelist.Add(files);
+                    path_List.Add(files.Path);
 
                 }
 
