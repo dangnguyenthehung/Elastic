@@ -15,18 +15,18 @@ using Xamarin.Forms.Xaml;
 namespace Elastic
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ResultListView : ContentPage
+    public partial class AnalyzerSearchPage : ContentPage
     {
         SearchBar searchBar;
         Label total;
 
         public ObservableCollection<ResultObj> ItemList { get; set; }
 
-        public ResultListView()
+        public AnalyzerSearchPage()
         {
             InitializeComponent();
 
-            BindingContext = new ResultListViewViewModel();
+            BindingContext = new AnalyzerSearchPageViewModel();
 
             // total lb
             total = new Label
@@ -41,13 +41,13 @@ namespace Elastic
                 Placeholder = "Enter keyword: ",
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 VerticalOptions = LayoutOptions.Start,
-                
+
                 SearchCommand = new Command(async () =>
                 {
                     //resultLabel.Text = "Result: " + searchBar.Text + " is what you want.";
                     string user_input = searchBar.Text;
                     SearchBoxModel model = new SearchBoxModel(user_input);
-                    model.result = await model.getData_Wildcard();
+                    model.result = await model.getData_Analyzer();
 
                     total.Text = "Total match: " + model.result.Count.ToString();
 
@@ -56,13 +56,13 @@ namespace Elastic
                     {
                         ItemList.Add(item);
                     }
-                    
-                    BindingContext = new ResultListViewViewModel(ItemList);
 
-                    
+                    BindingContext = new AnalyzerSearchPageViewModel(ItemList);
+
+
                 })
             };
-            
+
 
             headerLayout.Children.Add(searchBar);
             headerLayout.Children.Add(total);
@@ -85,16 +85,17 @@ namespace Elastic
 
 
 
-    public class ResultListViewViewModel : INotifyPropertyChanged
+    public class AnalyzerSearchPageViewModel : INotifyPropertyChanged
     {
         public ObservableCollection<ResultObj> Items { get; set; }
 
         public ObservableCollection<Grouping<string, ResultObj>> ItemsGrouped { get; }
 
-        public ResultListViewViewModel()
+        public AnalyzerSearchPageViewModel()
         {
             Items = new ObservableCollection<ResultObj>();
-            Items.Add(new ResultObj() {
+            Items.Add(new ResultObj()
+            {
                 title = "waiting...",
                 description = "waiting...",
                 district = "waiting...",
@@ -102,35 +103,17 @@ namespace Elastic
             });
         }
 
-        public ResultListViewViewModel(ObservableCollection<ResultObj> ItemList)
+        public AnalyzerSearchPageViewModel(ObservableCollection<ResultObj> ItemList)
         {
             Items = ItemList;
-
-            //Items = new ObservableCollection<Item>(new[]
-            //{
-            //    new Item { Text = "Baboon", Detail = "Africa & Asia" },
-            //    new Item { Text = "Capuchin Monkey", Detail = "Central & South America" },
-            //    new Item { Text = "Blue Monkey", Detail = "Central & East Africa" },
-            //    new Item { Text = "Squirrel Monkey", Detail = "Central & South America" },
-            //    new Item { Text = "Golden Lion Tamarin", Detail= "Brazil" },
-            //    new Item { Text = "Howler Monkey", Detail = "South America" },
-            //    new Item { Text = "Japanese Macaque", Detail = "Japan" },
-            //});
-
-            //var sorted = from item in Items
-            //             orderby item.Text
-            //             group item by item.Text[0].ToString() into itemGroup
-            //             select new Grouping<string, Item>(itemGroup.Key, itemGroup);
-
-            //ItemsGrouped = new ObservableCollection<Grouping<string, Item>>(sorted);
-
+            
             RefreshDataCommand = new Command(
                 async () => await RefreshData());
 
         }
         public string Input { get; set; }
 
-        
+
         public ICommand RefreshDataCommand { get; }
 
         async Task RefreshData()
@@ -138,7 +121,7 @@ namespace Elastic
             IsBusy = true;
             //Load Data Here
             await Task.Delay(2000);
-            
+
             IsBusy = false;
         }
 

@@ -38,10 +38,10 @@ D:\Project\XamarinTest\Elastic\Elastic\Elastic\obj\Debug\Elastic.TabPageTab1.xam
 D:\Project\XamarinTest\Elastic\Elastic\Elastic\obj\Debug\Elastic.ResultListView.xaml.g.cs
 D:\Project\XamarinTest\Elastic\Elastic\Elastic\obj\Debug\Elastic.UpLoadImagePage.xaml.g.cs
 D:\Project\XamarinTest\Elastic\Elastic\Elastic\obj\Debug\Elastic.PickImageList.xaml.g.cs
-D:\Project\XamarinTest\Elastic\Elastic\Elastic\obj\Debug\Elastic.ListViewPage1.xaml.g.cs
 D:\Project\XamarinTest\Elastic\Elastic\Elastic\obj\Debug\Elastic.GPSPage.xaml.g.cs
 D:\Project\XamarinTest\Elastic\Elastic\Elastic\obj\Debug\Elastic.dll
 D:\Project\XamarinTest\Elastic\Elastic\Elastic\obj\Debug\Elastic.pdb
 D:\Project\XamarinTest\Elastic\Elastic\Elastic\bin\Debug\Xamarin.Forms.Maps.dll
 D:\Project\XamarinTest\Elastic\Elastic\Elastic\bin\Debug\Xamarin.Forms.Maps.xml
 D:\Project\XamarinTest\Elastic\Elastic\Elastic\obj\Debug\Elastic.csprojResolveAssemblyReference.cache
+D:\Project\XamarinTest\Elastic\Elastic\Elastic\obj\Debug\Elastic.AnalyzerSearchPage.xaml.g.cs

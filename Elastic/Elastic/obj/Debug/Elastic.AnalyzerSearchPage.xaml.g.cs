@@ -14,11 +14,15 @@ namespace Elastic {
     using Xamarin.Forms.Xaml;
     
     
-    public partial class ListViewPage1 : global::Xamarin.Forms.ContentPage {
+    public partial class AnalyzerSearchPage : global::Xamarin.Forms.ContentPage {
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.StackLayout headerLayout;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
-            this.LoadFromXaml(typeof(ListViewPage1));
+            this.LoadFromXaml(typeof(AnalyzerSearchPage));
+            headerLayout = this.FindByName<global::Xamarin.Forms.StackLayout>("headerLayout");
         }
     }
 }

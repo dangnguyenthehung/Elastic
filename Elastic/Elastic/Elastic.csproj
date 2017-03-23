@@ -35,15 +35,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AnalyzerSearchPage.xaml.cs">
+      <DependentUpon>AnalyzerSearchPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Code\SearchBoxModel.cs" />
     <Compile Include="GPSPage.xaml.cs">
       <DependentUpon>GPSPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ListViewPage1.xaml.cs">
-      <DependentUpon>ListViewPage1.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -165,13 +165,13 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ListViewPage1.xaml">
+    <EmbeddedResource Include="GPSPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="GPSPage.xaml">
+    <EmbeddedResource Include="AnalyzerSearchPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

@@ -26,11 +26,22 @@ namespace Elastic.Code
         }
         
         // method - api elastic
-        public async Task<List<ResultObj>> getData()
+        public async Task<List<ResultObj>> getData_Wildcard()
         {
             List<ResultObj> data = new List<ResultObj>();
 
             string url = "http://dangnguyenthehung.somee.com/elasticTest/api/elasticDemo/?title=" + searchStr;
+
+            data = await getRESTAsync(url);//.ConfigureAwait(continueOnCapturedContext: false);
+            return data;
+        }
+
+        // analyzer
+        public async Task<List<ResultObj>> getData_Analyzer()
+        {
+            List<ResultObj> data = new List<ResultObj>();
+
+            string url = "http://dangnguyenthehung.somee.com/elasticTest/api/Analyzer/?title=" + searchStr;
 
             data = await getRESTAsync(url);//.ConfigureAwait(continueOnCapturedContext: false);
             return data;

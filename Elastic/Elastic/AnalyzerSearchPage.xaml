@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Elastic.ResultListView"
-             Title="Wildcard Search"
-             x:Name="MainView">
+             x:Class="Elastic.AnalyzerSearchPage"
+             Title="Analyzer Search"
+             x:Name="AnalyzerMainView">
     <ListView ItemsSource="{Binding Items}"
             ItemTapped="Handle_ItemTapped"
             ItemSelected="Handle_ItemSelected"
@@ -11,19 +11,17 @@
             CachingStrategy="RecycleElement"
             IsRefreshing="{Binding IsBusy, Mode=OneWay}"
             RefreshCommand="{Binding RefreshDataCommand}">
-    <ListView.Header>
+        <ListView.Header>
             <StackLayout Padding="10" 
                    Orientation="Horizontal"
                    HorizontalOptions="FillAndExpand"
                    x:Name="headerLayout">
-                
+
             </StackLayout>
         </ListView.Header>
-    <!--Built in Cells-->
-    <ListView.ItemTemplate>
-      <DataTemplate>
-        <!--<TextCell Text="{Binding Text}"
-                  Detail="{Binding Detail}"/>-->
+        <!--Built in Cells-->
+        <ListView.ItemTemplate>
+            <DataTemplate>
                 <ViewCell>
                     <ViewCell.View>
                         <StackLayout Orientation="Vertical" Spacing="0" Padding="10">
@@ -35,34 +33,19 @@
                     </ViewCell.View>
                 </ViewCell>
             </DataTemplate>
-    </ListView.ItemTemplate>
-    
-    <!--Custom View Cells-->
-    <!--
-    <ListView.ItemTemplate>
-      <DataTemplate>
-        <ViewCell>
-          <StackLayout>
-            <Label Text="{Binding Text}" 
-                   Style="{DynamicResource ListItemTextStyle}" />
-            <Label Text="{Binding Detail}" 
-                   Style="{DynamicResource ListItemDetailTextStyle}"/>
-          </StackLayout>
-        </ViewCell>
-      </DataTemplate>
-    </ListView.ItemTemplate>
-    -->
-    <ListView.Footer>
-      <StackLayout Padding="10"
+        </ListView.ItemTemplate>
+
+        <ListView.Footer>
+            <StackLayout Padding="10"
                    Orientation="Horizontal"
                    HorizontalOptions="FillAndExpand"
                    BackgroundColor="#dadada">
-        <Label Text="Footer" 
+                <Label Text="Footer" 
                HorizontalTextAlignment="Center" 
                HorizontalOptions="FillAndExpand" 
                TextColor="Black"
                FontAttributes="Bold"/>
-      </StackLayout>
-    </ListView.Footer>
-  </ListView>
+            </StackLayout>
+        </ListView.Footer>
+    </ListView>
 </ContentPage>
