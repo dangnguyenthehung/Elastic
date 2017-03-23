@@ -2,6 +2,8 @@ D:\Project\XamarinTest\Elastic\Elastic\Elastic\bin\Debug\Elastic.dll.config
 D:\Project\XamarinTest\Elastic\Elastic\Elastic\bin\Debug\Elastic.dll
 D:\Project\XamarinTest\Elastic\Elastic\Elastic\bin\Debug\Elastic.pdb
 D:\Project\XamarinTest\Elastic\Elastic\Elastic\bin\Debug\Newtonsoft.Json.dll
+D:\Project\XamarinTest\Elastic\Elastic\Elastic\bin\Debug\Plugin.Geolocator.Abstractions.dll
+D:\Project\XamarinTest\Elastic\Elastic\Elastic\bin\Debug\Plugin.Geolocator.dll
 D:\Project\XamarinTest\Elastic\Elastic\Elastic\bin\Debug\Plugin.Media.Abstractions.dll
 D:\Project\XamarinTest\Elastic\Elastic\Elastic\bin\Debug\Plugin.Media.dll
 D:\Project\XamarinTest\Elastic\Elastic\Elastic\bin\Debug\System.Net.Http.dll
@@ -12,6 +14,10 @@ D:\Project\XamarinTest\Elastic\Elastic\Elastic\bin\Debug\Xamarin.Forms.Core.dll
 D:\Project\XamarinTest\Elastic\Elastic\Elastic\bin\Debug\Xamarin.Forms.Platform.dll
 D:\Project\XamarinTest\Elastic\Elastic\Elastic\bin\Debug\Xamarin.Forms.Xaml.dll
 D:\Project\XamarinTest\Elastic\Elastic\Elastic\bin\Debug\Newtonsoft.Json.xml
+D:\Project\XamarinTest\Elastic\Elastic\Elastic\bin\Debug\Plugin.Geolocator.pdb
+D:\Project\XamarinTest\Elastic\Elastic\Elastic\bin\Debug\Plugin.Geolocator.xml
+D:\Project\XamarinTest\Elastic\Elastic\Elastic\bin\Debug\Plugin.Geolocator.Abstractions.pdb
+D:\Project\XamarinTest\Elastic\Elastic\Elastic\bin\Debug\Plugin.Geolocator.Abstractions.xml
 D:\Project\XamarinTest\Elastic\Elastic\Elastic\bin\Debug\Plugin.Media.pdb
 D:\Project\XamarinTest\Elastic\Elastic\Elastic\bin\Debug\Plugin.Media.xml
 D:\Project\XamarinTest\Elastic\Elastic\Elastic\bin\Debug\Plugin.Media.Abstractions.pdb
@@ -32,7 +38,10 @@ D:\Project\XamarinTest\Elastic\Elastic\Elastic\obj\Debug\Elastic.TabPageTab1.xam
 D:\Project\XamarinTest\Elastic\Elastic\Elastic\obj\Debug\Elastic.ResultListView.xaml.g.cs
 D:\Project\XamarinTest\Elastic\Elastic\Elastic\obj\Debug\Elastic.UpLoadImagePage.xaml.g.cs
 D:\Project\XamarinTest\Elastic\Elastic\Elastic\obj\Debug\Elastic.PickImageList.xaml.g.cs
+D:\Project\XamarinTest\Elastic\Elastic\Elastic\obj\Debug\Elastic.ListViewPage1.xaml.g.cs
+D:\Project\XamarinTest\Elastic\Elastic\Elastic\obj\Debug\Elastic.GPSPage.xaml.g.cs
 D:\Project\XamarinTest\Elastic\Elastic\Elastic\obj\Debug\Elastic.dll
 D:\Project\XamarinTest\Elastic\Elastic\Elastic\obj\Debug\Elastic.pdb
+D:\Project\XamarinTest\Elastic\Elastic\Elastic\bin\Debug\Xamarin.Forms.Maps.dll
+D:\Project\XamarinTest\Elastic\Elastic\Elastic\bin\Debug\Xamarin.Forms.Maps.xml
 D:\Project\XamarinTest\Elastic\Elastic\Elastic\obj\Debug\Elastic.csprojResolveAssemblyReference.cache
-D:\Project\XamarinTest\Elastic\Elastic\Elastic\obj\Debug\Elastic.ListViewPage1.xaml.g.cs

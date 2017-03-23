@@ -334,6 +334,12 @@
     <AppxPackagedFile Include="C:\Users\battl\.nuget\packages\System.Xml.XmlSerializer\4.0.10\lib\netcore50\System.Xml.XmlSerializer.dll">
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\battl\.nuget\packages\Xam.Plugin.Geolocator\3.0.4\lib\UAP10\Plugin.Geolocator.Abstractions.dll">
+      <PackagePath>Plugin.Geolocator.Abstractions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\battl\.nuget\packages\Xam.Plugin.Geolocator\3.0.4\lib\UAP10\Plugin.Geolocator.dll">
+      <PackagePath>Plugin.Geolocator.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\battl\.nuget\packages\Xam.Plugin.Media\2.6.2\lib\UAP10\Plugin.Media.Abstractions.dll">
       <PackagePath>Plugin.Media.Abstractions.dll</PackagePath>
     </AppxPackagedFile>
@@ -351,6 +357,12 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\battl\.nuget\packages\Xamarin.Forms\2.3.3.193\lib\uap10.0\Xamarin.Forms.Xaml.dll">
       <PackagePath>Xamarin.Forms.Xaml.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\battl\.nuget\packages\Xamarin.Forms.Maps\2.3.3.193\lib\uap10.0\Xamarin.Forms.Maps.UWP.dll">
+      <PackagePath>Xamarin.Forms.Maps.UWP.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\battl\.nuget\packages\Xamarin.Forms.Maps\2.3.3.193\lib\uap10.0\Xamarin.Forms.Maps.dll">
+      <PackagePath>Xamarin.Forms.Maps.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\XamarinTest\Elastic\Elastic\Elastic\bin\Debug\Elastic.dll">
       <PackagePath>Elastic.dll</PackagePath>

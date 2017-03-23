@@ -35,6 +35,7 @@
     <uap:Capability Name="videosLibrary" />
     <uap:Capability Name="picturesLibrary" />
     <DeviceCapability Name="webcam" />
+    <DeviceCapability Name="location" />
   </Capabilities>
   <build:Metadata>
     <build:Item Name="TargetFrameworkMoniker" Value=".NETCore,Version=v5.0" />

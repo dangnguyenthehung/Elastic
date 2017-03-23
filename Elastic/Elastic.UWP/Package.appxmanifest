@@ -27,5 +27,6 @@
     <uap:Capability Name="videosLibrary" />
     <uap:Capability Name="picturesLibrary" />
     <DeviceCapability Name="webcam" />
+    <DeviceCapability Name="location" />
   </Capabilities>
 </Package>

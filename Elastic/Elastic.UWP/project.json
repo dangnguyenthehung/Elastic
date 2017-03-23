@@ -2,8 +2,10 @@
   "dependencies": {
     "Microsoft.Bcl": "1.1.10",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.1.0",
+    "Xam.Plugin.Geolocator": "3.0.4",
     "Xam.Plugin.Media": "2.6.2",
-    "Xamarin.Forms": "2.3.3.193"
+    "Xamarin.Forms": "2.3.3.193",
+    "Xamarin.Forms.Maps": "2.3.3.193"
   },
   "frameworks": {
     "uap10.0": {}

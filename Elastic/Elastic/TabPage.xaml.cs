@@ -18,6 +18,7 @@ namespace Elastic
             InitializeComponent();
             Children.Add(new ResultListView());
             Children.Add(new PickImageList());
+            Children.Add(new GPSPage());
         }
     }
 }
