@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Elastic.Geocoding"
+             Title="Geocoding">
+    <ScrollView>
+        <StackLayout Padding="10">
+            <Label Text="Detect GPS" FontSize="20"/>
+            <Button Text="Get Location" Clicked="detectGPS" BackgroundColor="Silver" HeightRequest="40"/>
+
+            <Label x:Name="TimeStamp" HorizontalOptions="FillAndExpand" Text="Time: "/>
+            <Label x:Name="Latitude" HorizontalOptions="FillAndExpand" Text="Latitude: "/>
+            <Label x:Name="Longitude" HorizontalOptions="FillAndExpand" Text="Longitude: "/>
+            <Label x:Name="AddressComponents" HorizontalOptions="FillAndExpand" Font="16" Text="Address Components: " />
+            <Label x:Name="AddressFormatted" HorizontalOptions="FillAndExpand" Font="16" Text="Formatted Address: " />
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

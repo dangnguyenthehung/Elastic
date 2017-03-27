@@ -48,12 +48,21 @@ namespace Elastic
                 Longitude.Text += longitude.ToString();
                 Latitude.Text += latitude.ToString();
 
-                ReverseAddress(position.Latitude, position.Longitude);
+                
             }
             catch (Exception ex)
             {
                 TimeStamp.Text = ex.ToString();
                 System.Diagnostics.Debug.WriteLine("Unable to get location, may need to increase timeout: " + ex);
+            }
+
+            try
+            {
+                ReverseAddress(latitude, longitude);
+            }
+            catch (Exception ex)
+            {
+                Address.Text = "Cannot get details address at the moment!";
             }
 
            

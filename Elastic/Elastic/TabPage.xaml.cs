@@ -20,6 +20,7 @@ namespace Elastic
             Children.Add(new AnalyzerSearchPage());
             Children.Add(new PickImageList());
             Children.Add(new GPSPage());
+            Children.Add(new Geocoding());
         }
     }
 }
