@@ -19,19 +19,20 @@ namespace Elastic
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class GPSPage : ContentPage
     {
-        Geocoder geoCoder; 
+        Geocoder geoCoder;
+        double latitude = 0;
+        double longitude = 0;
+        DateTimeOffset timestamp;
 
         public GPSPage()
         {
             InitializeComponent();
+            AutoDetectGPS();
         }
 
-        private async void detectGPS(object sender, EventArgs e)
+        private async void AutoDetectGPS()
         {
             
-            double latitude = 0;
-            double longitude = 0;
-
             // get GPS location
             try
             {
@@ -40,20 +41,49 @@ namespace Elastic
 
                 var position = await locator.GetPositionAsync(timeoutMilliseconds: 60000); // 1 minute timeout
                 if (position == null)
+                {
                     return;
+                }
+                    
                 latitude = position.Latitude;
                 longitude = position.Longitude;
-
-                TimeStamp.Text += position.Timestamp.ToString();
-                Longitude.Text += longitude.ToString();
-                Latitude.Text += latitude.ToString();
-
-                
+                timestamp = position.Timestamp;
             }
             catch (Exception ex)
             {
                 TimeStamp.Text = ex.ToString();
                 System.Diagnostics.Debug.WriteLine("Unable to get location, may need to increase timeout: " + ex);
+            }
+
+            //try
+            //{
+            //    ReverseAddress(latitude, longitude);
+            //}
+            //catch (Exception ex)
+            //{
+            //    Address.Text = "Cannot get details address at the moment!";
+            //}
+
+        }
+
+        private void detectGPS(object sender, EventArgs e)
+        {
+            TimeStamp.Text = "Time: ";
+            Longitude.Text = "Longitude: ";
+            Latitude.Text = "Latitude: ";
+            Address.Text = "Address: ";
+            // get GPS location
+            try
+            {
+                if (latitude == 0 && longitude == 0)
+                {
+                    AutoDetectGPS();
+                }
+            }
+            catch (Exception ex)
+            {
+                TimeStamp.Text = "Unable to get location, may need to increase timeout! ";
+                System.Diagnostics.Debug.WriteLine(ex.ToString()); 
             }
 
             try
@@ -63,10 +93,11 @@ namespace Elastic
             catch (Exception ex)
             {
                 Address.Text = "Cannot get details address at the moment!";
+                System.Diagnostics.Debug.WriteLine(ex.ToString());
             }
 
-           
         }
+
 
         private async void ReverseAddress(double latitude, double longitude)
         {
@@ -75,8 +106,15 @@ namespace Elastic
                 geoCoder = new Geocoder();
                 var currentPosition = new Position(latitude, longitude);
                 var possibleAddresses = await geoCoder.GetAddressesForPositionAsync(currentPosition);
+                
+                TimeStamp.Text += timestamp.ToString();
+                Longitude.Text += longitude.ToString();
+                Latitude.Text += latitude.ToString();
+
                 foreach (var address in possibleAddresses)
+                {
                     Address.Text += address + "\n";
+                }
             }
             catch ( Exception ex)
             {

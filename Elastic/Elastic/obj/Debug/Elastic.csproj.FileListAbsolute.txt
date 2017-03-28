@@ -93,3 +93,4 @@ D:\Project\Elastic\Elastic\Elastic\obj\Debug\Elastic.Geocoding.xaml.g.cs
 D:\Project\Elastic\Elastic\Elastic\obj\Debug\Elastic.dll
 D:\Project\Elastic\Elastic\Elastic\obj\Debug\Elastic.pdb
 D:\Project\Elastic\Elastic\Elastic\obj\Debug\Elastic.csprojResolveAssemblyReference.cache
+D:\Project\XamarinTest\Elastic\Elastic\Elastic\obj\Debug\Elastic.Geocoding.xaml.g.cs
