@@ -111,6 +111,10 @@ D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\bin\x86\Debug\System.Xml.Read
 D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\bin\x86\Debug\System.Xml.XDocument.dll
 D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\bin\x86\Debug\System.Xml.XmlDocument.dll
 D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\bin\x86\Debug\System.Xml.XmlSerializer.dll
+D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\bin\x86\Debug\Plugin.Geolocator.Abstractions.dll
+D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\bin\x86\Debug\Plugin.Geolocator.Abstractions.pdb
+D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\bin\x86\Debug\Plugin.Geolocator.dll
+D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\bin\x86\Debug\Plugin.Geolocator.pdb
 D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\bin\x86\Debug\Plugin.Media.Abstractions.dll
 D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\bin\x86\Debug\Plugin.Media.Abstractions.pdb
 D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\bin\x86\Debug\Plugin.Media.dll
@@ -119,6 +123,8 @@ D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\bin\x86\Debug\Xamarin.Forms.C
 D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\bin\x86\Debug\Xamarin.Forms.Platform.UAP.dll
 D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\bin\x86\Debug\Xamarin.Forms.Platform.dll
 D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\bin\x86\Debug\Xamarin.Forms.Xaml.dll
+D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\bin\x86\Debug\Xamarin.Forms.Maps.UWP.dll
+D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\bin\x86\Debug\Xamarin.Forms.Maps.dll
 D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\bin\x86\Debug\Elastic.dll
 D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\bin\x86\Debug\Newtonsoft.Json.dll
 D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\bin\x86\Debug\Elastic.pdb
@@ -203,4 +209,5 @@ D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\obj\x86\Debug\qualifiers.txt
 D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\obj\x86\Debug\qualifiers.txt.intermediate
 D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\obj\x86\Debug\Xamarin.Forms.Platform.UAP.pri.xml
+D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\obj\x86\Debug\Xamarin.Forms.Maps.UWP.pri.xml
 D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\obj\x86\Debug\ProjectArchitectures.txt

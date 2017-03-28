@@ -16,7 +16,7 @@
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
-    <RegisteredManifestChecksum>30241A6B1951DB1EBBF204E72C2D3CC770EC11DE4D102C21BE11A44B7510D4C7</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>4655EB9097D00DE1695E2CDDB882402F9352272C344062A5F60AEFA7422E724F</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>e0f96183-755b-4f1b-bdd4-38a4b6381c79_1.0.0.0_x86__ne3cjs8v164aj</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>e0f96183-755b-4f1b-bdd4-38a4b6381c79_ne3cjs8v164aj!App</RegisteredUserModeAppID>
     <RegisteredPackageID>e0f96183-755b-4f1b-bdd4-38a4b6381c79</RegisteredPackageID>
@@ -28,13 +28,13 @@
     <AppXManifest Include="D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-03-17T11:35:26.749</Modified>
+      <Modified>2017-03-28T08:36:52.705</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\bin\x86\Debug\Elastic.UWP.exe">
       <PackagePath>entrypoint\Elastic.UWP.exe</PackagePath>
-      <Modified>2017-03-17T11:35:22.180</Modified>
+      <Modified>2017-03-28T08:36:51.402</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\battl\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -448,6 +448,14 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2015-07-22T16:11:12.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\battl\.nuget\packages\Xam.Plugin.Geolocator\3.0.4\lib\UAP10\Plugin.Geolocator.Abstractions.dll">
+      <PackagePath>Plugin.Geolocator.Abstractions.dll</PackagePath>
+      <Modified>2016-01-31T22:40:30.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\battl\.nuget\packages\Xam.Plugin.Geolocator\3.0.4\lib\UAP10\Plugin.Geolocator.dll">
+      <PackagePath>Plugin.Geolocator.dll</PackagePath>
+      <Modified>2016-01-31T22:40:30.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\battl\.nuget\packages\Xam.Plugin.Media\2.6.2\lib\UAP10\Plugin.Media.Abstractions.dll">
       <PackagePath>Plugin.Media.Abstractions.dll</PackagePath>
       <Modified>2017-01-06T14:20:54.000</Modified>
@@ -472,9 +480,17 @@
       <PackagePath>Xamarin.Forms.Xaml.dll</PackagePath>
       <Modified>2017-01-31T04:27:52.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\battl\.nuget\packages\Xamarin.Forms.Maps\2.3.3.193\lib\uap10.0\Xamarin.Forms.Maps.UWP.dll">
+      <PackagePath>Xamarin.Forms.Maps.UWP.dll</PackagePath>
+      <Modified>2017-01-31T04:27:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\battl\.nuget\packages\Xamarin.Forms.Maps\2.3.3.193\lib\uap10.0\Xamarin.Forms.Maps.dll">
+      <PackagePath>Xamarin.Forms.Maps.dll</PackagePath>
+      <Modified>2017-01-31T04:27:50.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\XamarinTest\Elastic\Elastic\Elastic\bin\Debug\Elastic.dll">
       <PackagePath>Elastic.dll</PackagePath>
-      <Modified>2017-03-17T11:35:17.583</Modified>
+      <Modified>2017-03-28T08:36:48.497</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\XamarinTest\Elastic\Elastic\Elastic\bin\Debug\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -640,7 +656,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
-      <Modified>2017-03-08T14:17:39.205</Modified>
+      <Modified>2017-03-27T16:54:49.024</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\battl\.nuget\packages\Xamarin.Forms\2.3.3.193\lib\uap10.0\Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml">
       <PackagePath>Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml</PackagePath>
@@ -653,11 +669,11 @@
     <AppxPackagedFile Include="D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-03-17T11:35:25.086</Modified>
+      <Modified>2017-03-28T08:17:07.075</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\XamarinTest\Elastic\Elastic\Elastic.UWP\bin\x86\Debug\Core\Elastic.UWP.exe">
       <PackagePath>Elastic.UWP.exe</PackagePath>
-      <Modified>2017-03-17T11:35:26.736</Modified>
+      <Modified>2017-03-28T08:36:52.694</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

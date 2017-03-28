@@ -21,7 +21,7 @@ namespace Elastic
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Geocoding : ContentPage
     {
-        Geocoder geoCoder;
+        //Geocoder geoCoder;
 
         public Geocoding()
         {
